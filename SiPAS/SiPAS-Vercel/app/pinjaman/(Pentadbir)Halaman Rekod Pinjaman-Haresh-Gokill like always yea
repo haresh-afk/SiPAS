@@ -1,0 +1,420 @@
+export default function RekodPinjaman(){
+
+const data = [
+{
+id:"PJN001",
+nama:"Ali Bin Hassan",
+alatan:"Bola Sepak",
+pinjam:"12/09/2024",
+pulangan:"15/09/2024",
+status:"Dalam Pinjaman"
+},
+{
+id:"PJN002",
+nama:"Siti Nur Aisyah",
+alatan:"Raket Badminton",
+pinjam:"10/09/2024",
+pulangan:"12/09/2024",
+status:"Telah Dipulangkan"
+},
+{
+id:"PJN003",
+nama:"Kumar A/L Ravi",
+alatan:"Kon Latihan",
+pinjam:"08/09/2024",
+pulangan:"10/09/2024",
+status:"Lewat Pemulangan"
+},
+{
+id:"PJN004",
+nama:"Amirul Hakim",
+alatan:"Bola Keranjang",
+pinjam:"05/09/2024",
+pulangan:"07/09/2024",
+status:"Telah Dipulangkan"
+},
+{
+id:"PJN005",
+nama:"Nur Izzah",
+alatan:"Wisel",
+pinjam:"03/09/2024",
+pulangan:"06/09/2024",
+status:"Telah Dipulangkan"
+}
+]
+
+
+return(
+
+<main className="min-h-screen bg-gray-100 p-6">
+
+
+<div className="bg-white shadow rounded-lg p-5">
+
+
+{/* Header */}
+
+<div className="flex justify-between items-center mb-5">
+
+
+<h1 className="text-xl font-bold text-gray-700">
+Rekod Pinjaman dan Pemulangan
+</h1>
+
+
+
+<div className="flex gap-3">
+
+
+<input
+className="
+border 
+rounded
+px-3
+py-2
+text-sm
+w-64
+"
+placeholder="Cari nama pemohon / peralatan..."
+/>
+
+
+
+<button
+className="
+bg-gray-700
+text-white
+px-4
+rounded
+">
+
+🔍
+
+</button>
+
+
+
+<button
+className="
+bg-gray-600
+text-white
+px-5
+rounded
+">
+
+⬇ Export
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+{/* Filter Button */}
+
+<div className="flex mb-4">
+
+
+<button className="
+bg-gray-700
+text-white
+px-5
+py-2
+text-sm
+rounded-l">
+
+Semua Rekod
+
+</button>
+
+
+<button className="
+border
+px-5
+py-2
+text-sm">
+
+Dalam Pinjaman
+
+</button>
+
+
+<button className="
+border
+px-5
+py-2
+text-sm">
+
+Telah Dipulangkan
+
+</button>
+
+
+<button className="
+border
+px-5
+py-2
+text-sm rounded-r">
+
+Lewat Pemulangan
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+{/* Table */}
+
+
+<table className="
+w-full
+border-collapse
+text-sm
+">
+
+
+<thead>
+
+<tr className="bg-gray-200">
+
+
+<th className="border p-3">
+Bil.
+</th>
+
+
+<th className="border p-3">
+ID Pinjaman
+</th>
+
+
+<th className="border p-3">
+Nama Pemohon
+</th>
+
+
+<th className="border p-3">
+Peralatan
+</th>
+
+
+<th className="border p-3">
+Tarikh Pinjaman
+</th>
+
+
+<th className="border p-3">
+Tarikh Pemulangan
+</th>
+
+
+<th className="border p-3">
+Status
+</th>
+
+
+<th className="border p-3">
+Tindakan
+</th>
+
+
+</tr>
+
+</thead>
+
+
+
+
+<tbody>
+
+
+{
+data.map((item,index)=>(
+
+<tr key={index}>
+
+
+<td className="border p-3 text-center">
+{index+1}
+</td>
+
+
+<td className="border p-3 text-center">
+{item.id}
+</td>
+
+
+<td className="border p-3">
+{item.nama}
+</td>
+
+
+<td className="border p-3">
+{item.alatan}
+</td>
+
+
+<td className="border p-3 text-center">
+{item.pinjam}
+</td>
+
+
+<td className="border p-3 text-center">
+{item.pulangan}
+</td>
+
+
+
+<td className="border p-3 text-center">
+
+
+<span className={`
+px-3
+py-1
+rounded
+text-xs
+
+${
+item.status==="Lewat Pemulangan"
+?
+"bg-red-100 text-red-700"
+:
+item.status==="Dalam Pinjaman"
+?
+"bg-yellow-100 text-yellow-700"
+:
+"bg-green-100 text-green-700"
+
+}
+
+`}>
+
+{item.status}
+
+</span>
+
+
+</td>
+
+
+
+
+<td className="border p-3 text-center">
+
+
+<button
+className="
+border
+px-3
+py-1
+rounded
+">
+
+👁
+
+</button>
+
+
+</td>
+
+
+
+</tr>
+
+
+))
+
+}
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+
+
+{/* Pagination */}
+
+<div className="
+flex 
+justify-between 
+items-center 
+mt-5
+">
+
+
+<div>
+
+<button className="border px-4 py-2">
+&lt; Sebelum
+</button>
+
+
+<button className="bg-gray-700 text-white px-4 py-2 ml-2">
+1
+</button>
+
+
+<button className="border px-4 py-2 ml-2">
+2
+</button>
+
+
+<button className="border px-4 py-2 ml-2">
+3
+</button>
+
+
+<button className="border px-4 py-2 ml-2">
+Seterusnya &gt;
+</button>
+
+
+</div>
+
+
+
+
+<div>
+
+<select className="border p-2">
+
+<option>Paparkan 5 rekod</option>
+<option>Paparkan 10 rekod</option>
+
+</select>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</main>
+
+
+)
+
+}
