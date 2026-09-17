@@ -1,0 +1,362 @@
+export default function Pinjaman(){
+
+return (
+
+<main className="min-h-screen bg-gray-100 p-8">
+
+
+{/* Page Header */}
+<div className="bg-white shadow rounded-lg p-6">
+
+<h1 className="text-2xl font-bold text-gray-700 mb-6">
+Permohonan Pinjaman Alatan Sukan
+</h1>
+
+
+
+{/* Two Column Form */}
+
+<div className="grid grid-cols-2 gap-5">
+
+
+{/* Maklumat Pemohon */}
+
+<div className="border rounded-lg p-5 bg-gray-50">
+
+<h2 className="font-bold mb-4 text-gray-700">
+Maklumat Pemohon
+</h2>
+
+
+<Form label="Nama">
+<input 
+className="input"
+placeholder="Nama Pengguna"
+/>
+</Form>
+
+
+<Form label="No. Matrik / ID">
+<input
+className="input"
+placeholder="XXXXXXXX"
+/>
+</Form>
+
+
+<Form label="Program / Jabatan">
+
+<select className="input">
+<option>Pilih Program</option>
+<option>Sains Komputer</option>
+<option>Kejuruteraan</option>
+</select>
+
+</Form>
+
+
+<Form label="No. Telefon">
+
+<input
+className="input"
+placeholder="012-3456789"
+/>
+
+</Form>
+
+
+
+<Form label="Emel">
+
+<input
+className="input"
+placeholder="nama@email.com"
+/>
+
+</Form>
+
+
+</div>
+
+
+
+
+{/* Maklumat Pinjaman */}
+
+<div className="border rounded-lg p-5 bg-gray-50">
+
+
+<h2 className="font-bold mb-4 text-gray-700">
+Maklumat Pinjaman
+</h2>
+
+
+
+<Form label="Tarikh Pinjaman">
+
+<input
+type="date"
+className="input"
+/>
+
+</Form>
+
+
+
+<Form label="Tarikh Pemulangan">
+
+<input
+type="date"
+className="input"
+/>
+
+</Form>
+
+
+
+<Form label="Tujuan Pinjaman">
+
+<select className="input">
+
+<option>Pilih Tujuan</option>
+<option>Program</option>
+<option>Latihan</option>
+
+</select>
+
+</Form>
+
+
+
+
+<Form label="Catatan (Jika ada)">
+
+<textarea
+className="input h-24"
+placeholder="Taip di sini..."
+></textarea>
+
+
+</Form>
+
+
+</div>
+
+
+</div>
+
+
+
+
+{/* Senarai Peralatan */}
+
+<div className="mt-6 border rounded-lg p-5">
+
+
+<div className="flex justify-between mb-4">
+
+<h2 className="font-bold text-gray-700">
+Senarai Peralatan Dipohon
+</h2>
+
+
+<button className="
+bg-gray-700 
+text-white 
+px-4 
+py-2 
+rounded
+text-sm">
+
++ Tambah Peralatan
+
+</button>
+
+
+</div>
+
+
+
+
+
+<table className="w-full border text-sm">
+
+
+<thead className="bg-gray-200">
+
+<tr>
+
+<th className="border p-3">
+Bil.
+</th>
+
+<th className="border p-3">
+Nama Peralatan
+</th>
+
+
+<th className="border p-3">
+Kuantiti
+</th>
+
+
+<th className="border p-3">
+Tindakan
+</th>
+
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+<tr>
+
+
+<td className="border p-3 text-center">
+1
+</td>
+
+
+
+<td className="border p-3">
+
+
+<select className="input">
+
+<option>
+Pilih Peralatan
+</option>
+
+<option>
+Bola Sepak
+</option>
+
+<option>
+Raket Badminton
+</option>
+
+</select>
+
+
+</td>
+
+
+
+<td className="border p-3 text-center">
+
+
+<input
+className="input w-20"
+value="1"
+readOnly
+/>
+
+</td>
+
+
+
+<td className="border p-3 text-center">
+
+
+<button>
+🗑️
+</button>
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+{/* Button */}
+
+<div className="flex justify-end gap-3 mt-6">
+
+
+<button
+className="
+border
+px-6
+py-2
+rounded">
+
+Batal
+
+</button>
+
+
+
+<button
+className="
+bg-gray-700
+text-white
+px-6
+py-2
+rounded">
+
+Hantar Permohonan
+
+</button>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</main>
+
+)
+
+}
+
+
+
+
+function Form({label,children}){
+
+return(
+
+<div className="grid grid-cols-3 items-center gap-3 mb-3">
+
+
+<label className="text-sm text-gray-600">
+{label}
+</label>
+
+
+<div className="col-span-2">
+{children}
+</div>
+
+
+</div>
+
+
+)
+
+}
