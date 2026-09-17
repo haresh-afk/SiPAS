@@ -1,0 +1,486 @@
+export default function SenaraiPeralatan(){
+
+const items = [
+
+{
+nama:"Bola Sepak",
+kategori:"Bola",
+kuantiti:10,
+lokasi:"Stor A",
+status:"Tersedia"
+},
+
+{
+nama:"Raket Badminton",
+kategori:"Bola",
+kuantiti:5,
+lokasi:"Stor A",
+status:"Dalam Pinjaman"
+},
+
+{
+nama:"Kon Latihan",
+kategori:"Aksesori",
+kuantiti:20,
+lokasi:"Stor B",
+status:"Tersedia"
+},
+
+{
+nama:"Bola Keranjang",
+kategori:"Bola",
+kuantiti:8,
+lokasi:"Stor A",
+status:"Tidak Tersedia"
+},
+
+{
+nama:"Wisel",
+kategori:"Aksesori",
+kuantiti:15,
+lokasi:"Stor B",
+status:"Tersedia"
+}
+
+]
+
+
+return(
+
+<main className="min-h-screen bg-gray-100 p-6">
+
+
+<div className="bg-white shadow rounded-lg p-5">
+
+
+
+{/* Header */}
+
+<div className="
+flex
+justify-between
+items-center
+mb-5
+">
+
+
+<h1 className="
+text-xl
+font-bold
+text-gray-700
+">
+
+Senarai Peralatan
+
+</h1>
+
+
+
+<button
+className="
+bg-gray-700
+text-white
+px-4
+py-2
+rounded
+text-sm
+">
+
++ Tambah Peralatan
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+{/* Filter */}
+
+<div className="
+flex
+gap-3
+mb-5
+">
+
+
+<select className="border p-2 rounded text-sm">
+
+<option>
+Semua Kategori
+</option>
+
+<option>
+Bola
+</option>
+
+<option>
+Aksesori
+</option>
+
+</select>
+
+
+
+
+<select className="border p-2 rounded text-sm">
+
+<option>
+Semua Status
+</option>
+
+<option>
+Tersedia
+</option>
+
+<option>
+Dalam Pinjaman
+</option>
+
+</select>
+
+
+
+
+
+<div className="flex">
+
+<input
+
+className="
+border
+p-2
+w-60
+text-sm
+"
+
+placeholder="Cari peralatan..."
+
+/>
+
+
+<button className="
+bg-gray-700
+text-white
+px-4
+">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+{/* Table */}
+
+
+<table className="
+w-full
+border-collapse
+text-sm
+">
+
+
+<thead className="bg-gray-200">
+
+
+<tr>
+
+
+<th className="border p-3">
+Bil.
+</th>
+
+
+<th className="border p-3">
+Gambar
+</th>
+
+
+<th className="border p-3">
+Nama Peralatan
+</th>
+
+
+<th className="border p-3">
+Kategori
+</th>
+
+
+<th className="border p-3">
+Kuantiti
+</th>
+
+
+<th className="border p-3">
+Lokasi
+</th>
+
+
+<th className="border p-3">
+Status
+</th>
+
+
+<th className="border p-3">
+Tindakan
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody>
+
+
+{
+items.map((item,index)=>(
+
+
+<tr key={index}>
+
+
+<td className="border p-3 text-center">
+{index+1}
+</td>
+
+
+
+
+<td className="border p-3 text-center">
+
+<div className="
+w-10
+h-10
+border
+mx-auto
+flex
+items-center
+justify-center
+">
+
+🖼️
+
+</div>
+
+</td>
+
+
+
+
+
+<td className="border p-3">
+
+{item.nama}
+
+</td>
+
+
+
+
+
+<td className="border p-3 text-center">
+
+{item.kategori}
+
+</td>
+
+
+
+
+
+<td className="border p-3 text-center">
+
+{item.kuantiti}
+
+</td>
+
+
+
+
+
+<td className="border p-3 text-center">
+
+{item.lokasi}
+
+</td>
+
+
+
+
+
+<td className="border p-3 text-center">
+
+
+<span className={`
+px-3
+py-1
+rounded
+text-xs
+
+${
+item.status==="Tersedia"
+
+?
+
+"bg-green-100 text-green-700"
+
+:
+
+item.status==="Dalam Pinjaman"
+
+?
+
+"bg-yellow-100 text-yellow-700"
+
+:
+
+"bg-red-100 text-red-700"
+
+}
+
+`}>
+
+{item.status}
+
+</span>
+
+
+</td>
+
+
+
+
+
+
+<td className="border p-3 text-center">
+
+
+<button className="
+border
+px-3
+py-1
+rounded
+">
+
+👁
+
+</button>
+
+
+</td>
+
+
+
+
+</tr>
+
+
+))
+
+
+}
+
+
+
+</tbody>
+
+
+</table>
+
+
+
+
+
+
+
+
+{/* Pagination */}
+
+<div className="
+flex
+justify-end
+gap-2
+mt-5
+">
+
+
+<button className="border px-4 py-2">
+
+&lt; Sebelum
+
+</button>
+
+
+
+<button className="
+bg-gray-700
+text-white
+px-4
+py-2
+">
+
+1
+
+</button>
+
+
+
+<button className="border px-4 py-2">
+2
+</button>
+
+
+
+<button className="border px-4 py-2">
+3
+</button>
+
+
+
+
+<button className="border px-4 py-2">
+
+Seterusnya &gt;
+
+</button>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</main>
+
+
+)
+
+}
