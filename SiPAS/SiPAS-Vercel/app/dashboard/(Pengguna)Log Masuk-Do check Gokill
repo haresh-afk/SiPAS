@@ -1,0 +1,347 @@
+export default function Login(){
+
+return(
+
+<main className="min-h-screen bg-gray-100 flex items-center justify-center">
+
+
+<div className="
+bg-white
+shadow-lg
+border
+w-[900px]
+grid
+grid-cols-2
+rounded
+overflow-hidden
+">
+
+
+
+{/* Left Login Form */}
+
+<div className="
+p-10
+flex
+flex-col
+items-center
+">
+
+
+{/* Logo */}
+
+<div className="mb-4 text-center">
+
+
+<div className="
+text-5xl
+mb-2
+">
+
+☒
+
+</div>
+
+
+<h1 className="
+text-2xl
+font-bold
+">
+
+SiPAS
+
+</h1>
+
+
+<p className="
+text-xs
+text-gray-500
+">
+
+SISTEM INVENTORI & PINJAMAN ALATAN SUKAN
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<h2 className="
+font-bold
+text-lg
+mb-5
+">
+
+Log Masuk ke Akaun Anda
+
+</h2>
+
+
+
+
+
+{/* Username */}
+
+<div className="w-full mb-3">
+
+
+<div className="
+flex
+items-center
+border
+rounded
+">
+
+
+<span className="px-3">
+👤
+</span>
+
+
+<input
+
+className="
+w-full
+p-2
+outline-none
+text-sm
+"
+
+placeholder="ID Pengguna / Emel"
+
+/>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+{/* Password */}
+
+<div className="w-full mb-3">
+
+
+<div className="
+flex
+items-center
+border
+rounded
+">
+
+
+<span className="px-3">
+🔒
+</span>
+
+
+<input
+
+type="password"
+
+className="
+w-full
+p-2
+outline-none
+text-sm
+"
+
+placeholder="Kata Laluan"
+
+/>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+{/* Remember */}
+
+<div className="
+flex
+justify-between
+w-full
+text-sm
+mb-5
+">
+
+
+<label>
+
+<input type="checkbox"/>
+<span className="ml-2">
+Ingat saya
+</span>
+
+</label>
+
+
+
+<a className="
+text-gray-600
+underline
+">
+
+Lupa kata laluan?
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+{/* Login Button */}
+
+<button
+
+className="
+bg-gray-700
+text-white
+w-full
+py-2
+rounded
+font-semibold
+"
+
+>
+
+Log Masuk
+
+</button>
+
+
+
+
+
+
+<div className="
+flex
+items-center
+gap-3
+my-5
+w-full
+">
+
+
+<hr className="flex-1"/>
+
+<span>
+atau
+</span>
+
+<hr className="flex-1"/>
+
+
+</div>
+
+
+
+
+
+
+{/* Register */}
+
+<button
+
+className="
+border
+w-full
+py-2
+rounded
+"
+
+>
+
+Daftar Akaun Baharu
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+{/* Right Image */}
+
+<div className="
+bg-gray-100
+flex
+flex-col
+items-center
+justify-center
+p-8
+">
+
+
+<div className="
+w-full
+h-80
+border
+flex
+items-center
+justify-center
+text-gray-400
+text-xl
+">
+
+
+Gambar Sukan
+
+
+</div>
+
+
+
+<p className="
+italic
+mt-5
+text-gray-600
+">
+
+"Sukan Membina Generasi Sihat"
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</main>
+
+
+)
+
+}
