@@ -1,0 +1,339 @@
+export default function Home(){
+
+return(
+
+<main className="min-h-screen bg-gray-100">
+
+
+{/* Navigation */}
+
+<nav className="
+bg-white
+shadow
+px-10
+py-4
+flex
+justify-between
+items-center
+">
+
+
+{/* Logo */}
+
+<div>
+
+<h1 className="
+text-3xl
+font-bold
+text-gray-800">
+
+SiPAS
+
+</h1>
+
+
+<p className="text-xs text-gray-500">
+SISTEM INVENTORI & PINJAMAN ALATAN SUKAN
+</p>
+
+
+</div>
+
+
+
+
+{/* Menu */}
+
+<div className="flex gap-6 text-sm">
+
+
+<a className="font-bold border-b-2 border-gray-700">
+Utama
+</a>
+
+
+<a>
+Mengenai
+</a>
+
+
+<a>
+Peralatan
+</a>
+
+
+<a>
+Pinjaman
+</a>
+
+
+<a>
+Hubungi
+</a>
+
+
+
+</div>
+
+
+
+
+{/* Search */}
+
+<div className="flex">
+
+
+<input
+className="
+border
+px-3
+py-2
+w-40
+"
+placeholder="Cari..."
+/>
+
+
+<button
+className="
+bg-gray-700
+text-white
+px-4
+">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+
+</nav>
+
+
+
+
+
+{/* Hero Section */}
+
+<section className="
+grid
+grid-cols-2
+gap-8
+p-10
+bg-white
+">
+
+
+{/* Banner */}
+
+<div
+className="
+h-64
+border
+flex
+items-center
+justify-center
+bg-gray-100
+">
+
+
+<div className="
+text-gray-400
+text-xl
+">
+
+Gambar Banner / Sukan
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+{/* Text */}
+
+<div className="
+flex
+flex-col
+justify-center
+">
+
+
+<h1 className="
+text-3xl
+font-bold
+text-gray-800
+mb-4">
+
+Kemudahan Pinjaman
+<br/>
+Alatan Sukan Secara Dalam Talian
+
+</h1>
+
+
+
+<p className="
+text-gray-600
+mb-6
+">
+
+Urus peralatan sukan dengan lebih mudah,
+<br/>
+teratur dan efisien.
+
+</p>
+
+
+
+
+<button
+className="
+bg-gray-700
+text-white
+px-8
+py-3
+rounded
+w-fit
+">
+
+Log Masuk →
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+{/* Feature Section */}
+
+
+<section className="
+grid
+grid-cols-3
+gap-5
+p-10
+">
+
+
+<Feature
+
+title="Rekod Tersusun"
+
+desc="Maklumat peralatan sentiasa dikemas kini"
+
+/>
+
+
+
+<Feature
+
+title="Proses Lebih Mudah"
+
+desc="Permohonan pinjaman secara dalam talian"
+
+/>
+
+
+
+<Feature
+
+title="Sokongan Pengguna"
+
+desc="Masa dan efisien"
+
+/>
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+)
+
+}
+
+
+
+
+
+function Feature({title,desc}){
+
+
+return(
+
+<div className="
+bg-white
+border
+rounded
+p-6
+text-center
+shadow-sm
+">
+
+
+<div className="
+h-20
+flex
+items-center
+justify-center
+text-4xl
+mb-4
+">
+
+☒
+
+</div>
+
+
+
+<h2 className="
+font-bold
+text-lg
+mb-2
+">
+
+{title}
+
+</h2>
+
+
+<p className="
+text-gray-500
+text-sm
+">
+
+{desc}
+
+</p>
+
+
+
+</div>
+
+
+)
+
+
+}
